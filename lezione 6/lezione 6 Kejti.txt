@@ -1,0 +1,9 @@
+#Controlla collisioni
+rett_uccello = pygame.Rect(uccello_x, uccello_y, DIMENSIONE_UCCELLO, DIMENSIONE_UCCELLO)
+for muro in lista_muri:
+x = muro[0]
+altezza_superiore = muro[1]
+rett_muro_sopra = pygame.Rect(x, 0, LARGHEZZA_MURO, altezza_superiore)
+rett_muro_sotto = pygame.Rect(x, altezza_superiore + SPAZIO_VUOTO, LARGHEZZA_MURO, ALTEZZA)
+if rett_uccello.colliderect(rett_muro_sopra) or rett_uccello.colliderect(rett_muro_sotto):
+in_pausa = True
