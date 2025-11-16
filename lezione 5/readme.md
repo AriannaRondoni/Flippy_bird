@@ -14,3 +14,6 @@ while in_esecuzione:
               lista_muri.clear()
               punteggio = 0
               in_pausa = False
+           if not in_pausa:
+              velocità_y += gravità
+              uccello_y += velocità_y
