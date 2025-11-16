@@ -1,17 +1,6 @@
-import pygame
-import sys
-import random
- 
-pygame.init()
-LARGHEZZA = 400
-ALTEZZA = 600
-finestra = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
-pygame.display.set_caption("Gioco dell'Uccello - Completo")
-AZZURRO = (135, 206, 235)
-VERDE = (0, 200, 0)
-ROSSO = (255, 0, 0)
-BIANCO = (255, 255, 255)
-NERO = (0, 0, 0)
-ROSA = (255, 0, 127)
+Setup e Inizializzazione
+l'obiettivo è di preparare l'ambiente di gioco e definire le costanti di base.
+in questo codice, vengono importate le librerie necessarie (pygame, sys, random), inizializza Pygame, definisce le dimensioni della finestra (LARGHEZZA, ALTEZZA),
+crea la finestra e definisce la palette di colori RGB che verranno utilizzati nel gioco (es. AZZURRO per lo sfondo, ROSSO per l'uccello).
  
  
