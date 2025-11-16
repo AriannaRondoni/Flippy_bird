@@ -8,13 +8,13 @@ Ogni muro superato dà un punto; se si tocca un ostacolo o si esce dallo schermo
 🟩 Francesco – I muri del percorso
 - lezione 1
 - lezione 3
-- lezione 9
+- lezione 10
 
 🟥 Arianna – Movimento dell’uccello
 - lezione 2
 - lezione 5
 - lezione 7
-- lezione 10
+- lezione 9
 
 🟧 Kejti – Collisioni e punteggio
 - lezione 4
