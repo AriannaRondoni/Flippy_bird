@@ -1,0 +1,12 @@
+#punteggio
+font = pygame.font.SysFont(None, 40)
+punteggio = 0
+
+def mostra_testo(testo, colore, y):
+    superficie = font.render(testo, True, colore)
+    rett = superficie.get_rect(center=(LARGHEZZA // 2, y))
+    finestra.blit(superficie, rett)
+
+#fluidità
+orologio = pygame.time.Clock()
+FPS = 60
