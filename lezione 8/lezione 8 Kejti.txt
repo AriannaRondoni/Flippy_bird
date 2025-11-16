@@ -1,0 +1,4 @@
+# Aumenta punteggio
+for muro in lista_muri:
+if muro[0] + LARGHEZZA_MURO == uccello_x:
+punteggio += 1
