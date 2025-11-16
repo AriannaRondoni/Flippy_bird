@@ -1,1 +1,17 @@
-
+import pygame
+import sys
+import random
+ 
+pygame.init()
+LARGHEZZA = 400
+ALTEZZA = 600
+finestra = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
+pygame.display.set_caption("Gioco dell'Uccello - Completo")
+AZZURRO = (135, 206, 235)
+VERDE = (0, 200, 0)
+ROSSO = (255, 0, 0)
+BIANCO = (255, 255, 255)
+NERO = (0, 0, 0)
+ROSA = (255, 0, 127)
+ 
+ 
