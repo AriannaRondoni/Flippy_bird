@@ -1,0 +1,3 @@
+if not in_pausa:
+  velocità_y += gravità
+  uccello_y += velocità_y
