@@ -1,0 +1,6 @@
+DIMENSIONE_UCCELLO = 30
+uccello_x = 100
+uccello_y = ALTEZZA // 2
+velocità_y = 0
+gravità = 0.3
+salto = -5
