@@ -1,34 +1,17 @@
-#PARTE 1
-LARGHEZZA_MURO = 60
-SPAZIO_VUOTO = 150
-velocità_muri = 3
-lista_muri = []
- 
-def crea_muro():
- altezza_superiore = random.randint(100, 300)
- x = LARGHEZZA + 100
- return [x, altezza_superiore]
-# Timer per generare muri ogni tot tempo
- AGGIUNGI_MURO = pygame.USEREVENT + 1
- pygame.time.set_timer(AGGIUNGI_MURO, 1500)
- 
-#PARTE 2
-while in_esecuzione:
-  for evento in pygame.event.get():
-      if evento.type == AGGIUNGI_MURO and not in_pausa:
-        lista_muri.append(crea_muro())
+Definizione, Creazione e Animazione
 
-if not in_pausa:
-# Movimento muri
-  for muro in lista_muri:
-    muro[0] -= velocità_muri
-# Rimuovi muri fuori dallo schermo
-    lista_muri = [m for m in lista_muri if m[0] + LARGHEZZA_MURO > 0]
- 
-#PARTE 3
-for muro in lista_muri:
-  x = muro[0]
-  altezza = muro[1]
-  pygame.draw.rect(finestra, VERDE, (x, 0, LARGHEZZA_MURO, altezza))
-  pygame.draw.rect(finestra, VERDE, (x, altezza + SPAZIO_VUOTO, LARGHEZZA_MURO, ALTEZZA - (altezza + SPAZIO_VUOTO)))
+la parte 1 di questa lezione, definisce le caratteristiche statiche e il meccanismo di generazione degli ostacoli:
+-Vengono impostati parametri chiave come la larghezza dei muri (LARGHEZZA_MURO), la dimensione dello spazio libero attraverso cui l'uccello deve passare (SPAZIO_VUOTO) 
+e la velocità di scorrimento orizzontale (velocità_muri).
+-Viene introdotta la Funzione di Creazione (crea_muro): Questa funzione calcola in modo casuale l'altezza del tubo superiore 
+e restituisce una lista che rappresenta la posizione iniziale del nuovo muro (fuori dal lato destro dello schermo).
+-Viene configurato un timer di Pygame (pygame.time.set_timer) che attiva un evento personalizzato (AGGIUNGI_MURO) ogni 1,5 secondi.
+Questo garantisce che un nuovo ostacolo venga generato a intervalli regolari
 
+La parte 2, invece, implementa la logica dinamica all'interno del ciclo principale del gioco:
+-Quando l'evento AGGIUNGI_MURO viene rilevato (grazie al timer impostato nella Lezione 3) e il gioco non è in pausa, un nuovo muro viene creato dalla funzione crea_muro() 
+e aggiunto alla lista degli ostacoli attivi (lista_muri).
+-Per simulare lo scorrimento del paesaggio (che dà l'illusione che l'uccello stia volando in avanti), 
+ogni muro nella lista_muri viene spostato verso sinistra decrementando la sua coordinata X della velocità_muri in ogni frame.
+-Il codice include un'operazione di pulizia (list comprehension) che rimuove dalla lista tutti i muri che sono usciti completamente dal lato sinistro dello schermo.
+Questo è fondamentale per mantenere efficiente il gioco, evitando di elaborare e disegnare ostacoli che non sono più visibili.
