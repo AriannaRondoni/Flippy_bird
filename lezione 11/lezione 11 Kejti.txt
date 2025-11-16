@@ -1,0 +1,9 @@
+testo_punti = font.render(f"Punteggio: {punteggio}", True, NERO)
+finestra.blit(testo_punti, (10, 10))
+ 
+if in_pausa:
+mostra_testo("Hai perso!", ROSSO, ALTEZZA // 2 - 30)
+mostra_testo("Premi Spazio per riprovare", ROSA, ALTEZZA // 2 + 10)
+pygame.display.update()
+pygame.quit()
+sys.exit()
